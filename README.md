@@ -18,11 +18,11 @@ go to "localhost/launch_spider/store_name [adidas|nike]"
 # API
 
 ## AEP
-/items - clothes
-/stores - stores
+##### /items - clothes
+##### /stores - stores
 
 ## sorting
-/items?sort=baseprice
+##### /items?sort=baseprice
 
 ## pagination
-/items?max_results=10&page=5
+##### /items?max_results=10&page=5
