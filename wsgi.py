@@ -18,6 +18,7 @@ app = create_app()
 
 @app.route("/launch_spider/<string:spider_name>/")
 def enqueue_scrapy_job(spider_name):
+    # TODO: doesn't work properly. because of job doesn't creates immediately
     if spider_name in [arg for job in q.get_jobs() for arg in job.args]:
         return 'Job already loaded.'
     q.enqueue(launch_spider, spider_name)
