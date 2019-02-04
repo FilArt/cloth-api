@@ -109,4 +109,4 @@ class Pipeline:
     def _process_page(self, page_url):
         for item in self.spider.parse_page(page_url):
             self.process_item(item)
-        logger.info('finished processing page {page_url}')
+        print('finished processing page {page_url}')
