@@ -9,11 +9,11 @@ pipenv shell
 gunicorn wsgi:app
 ```
 # launch spiders
-## before launch worker
+#### 1) before launch worker
 ```sh
 rq worker
 ```
-go to "localhost/launch_spider/store_name [adidas|nike]"
+#### 2) go to "localhost/launch_spider/store_name [adidas|nike]"
 
 # API
 
