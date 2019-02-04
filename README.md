@@ -21,6 +21,11 @@ rq worker
 ##### /items - clothes
 ##### /stores - stores
 
+## filtering
+##### /items?where=baseprice==2690   return all records with baseprice=2690.0
+##### /items?where=baseprice<=5000
+##### /items/5c559dca0a9ac0096c124b6f  return one item by id
+
 ## sorting
 ##### /items?sort=baseprice
 
