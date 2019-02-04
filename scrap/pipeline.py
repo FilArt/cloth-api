@@ -16,8 +16,8 @@ SPIDERS_NUM = 3
 
 
 class Pipeline:
-    def __init__(self, spider_name: str):
-        self.mongo_client = MongoClient("mongodb://cloth:cloth@localhost/cloth")
+    def __init__(self, spider_name: str, mongo_uri):
+        self.mongo_client = MongoClient(mongo_uri)
         db = self.mongo_client.cloth
         store_data = db.stores.find_one({"spider_name": spider_name})
         self.store_id = store_data["_id"]
@@ -56,8 +56,8 @@ class Pipeline:
 
         await queue.join()
 
-        # for task in tasks:
-        #     task.cancel()
+        for task in tasks:
+            task.cancel()
         await asyncio.gather(*tasks, return_exceptions=False)
 
         self.mongo_client.close()
@@ -109,4 +109,5 @@ class Pipeline:
     def _process_page(self, page_url):
         for item in self.spider.parse_page(page_url):
             self.process_item(item)
-        print('finished processing page {page_url}')
+        print(f'finished processing page {page_url}')
+

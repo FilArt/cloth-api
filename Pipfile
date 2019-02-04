@@ -4,14 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+ipython = "*"
+httpie = "*"
 
 [packages]
-scrapy = "*"
-rq = "*"
-raven = "*"
 eve = "*"
-requests = "*"
+dnspython = "*"
 sentry-sdk = "*"
+redis = "*"
+rq = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"

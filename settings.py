@@ -1,5 +1,7 @@
+import os
+
 # TODO: DO SMTHNG
-MONGO_URI = 'mongodb://cloth:cloth@localhost/cloth'
+MONGO_URI = 'mongodb+srv://cloth:cloth@main-t0esf.mongodb.net/cloth'
 
 RESOURCE_METHODS = ['GET', 'POST', 'DELETE']
 ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
