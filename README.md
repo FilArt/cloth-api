@@ -1,16 +1,19 @@
 # installation
-sudo pacman -S python-pipenv
+```sh
+sudo pacman -S
+python-pipenv
 pipenv shell
-
+```
 # launching
+```sh
 gunicorn wsgi:app
-
+```
 # launch spiders
 ## before launch worker
+```sh
 rq worker
-
+```
 go to "localhost/launch_spider/store_name [adidas|nike]"
-
 
 # API
 
